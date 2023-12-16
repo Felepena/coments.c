@@ -1,36 +1,38 @@
 let comments = [
     {
         name: "Miroslav Novotný",
-        date: 10.4,
-        text: "miragay"
+        date: new Date('2023-12-12T12:34:56Z'),
+        text: "Filip is soo hot"
     },
     {
         name: "Filip Másilko",
-        date: 10.4,
-        text: "Filip is wery sexi man"
+        date: new Date('2023-12-12T12:34:56Z'),
+        text: "Filip is wery handsome"
     },
     {
         name: "Vito Kraus",
-        date: 10.4,
-        text: "I love how sexi Filip is"
+        date: new Date('2023-12-12T12:34:56Z'),
+        text: "I love how handsome filip is"
     }
 ]
 
+
+
 let resultDiv = document.getElementById("result");
 
-for (const comentar of comments) {
+for (const comment of comments) {
     let div = document.createElement("div");
-    div.className = "comentar"
-    let myname = document.createElement("h1")
-    h1.className = "mynameis"
-    let date = document.createElement("p")
-    p.className = "mydate"
+    div.className = "comentar";
+    let jmeno = document.createElement("h4");
+    jmeno.innerText = comment.name;
+    let datum = document.createElement("h5");
+    datum.innerText = comment.date.toLocaleString();
     let text = document.createElement("p");
-    text.innerText = comment.text
+    text.innerText = comment.text;
     let div2 = document.createElement("div");
-    div2.className = "commentInfo"
+    div2.className = "commentInfo";
     let img = document.createElement("img");
-    img.src = <img src="img.png" alt="profilovafotka"/>
+    img.src = "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     div2.appendChild(img);
     div2.appendChild(jmeno);
     div2.appendChild(datum);
